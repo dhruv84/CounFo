@@ -63,6 +63,9 @@ if (btn) {
 function renderMarkup(country) {
   console.log(country);
   const languages = Object.keys(country.languages);
+  const currencies = Object.keys(country.currencies);
+  console.log(languages);
+  console.log(currencies);
 
   if (document.querySelector(".country")) {
     document.querySelector(".country").remove();
@@ -114,6 +117,10 @@ function renderMarkup(country) {
           <div class="country_info-sec">
             <p><span class="list_dot"></span>Time Zone</p>
             <p class="text-color">${country.timezones[0]}</p>
+          </div>
+          <div class="country_info-sec">
+            <p><span class="list_dot"></span>Currency</p>
+            <p class="text-color">${currencies[0]}</p>
           </div>
         </div>
       </div>
