@@ -10,6 +10,8 @@
   --color-secondry: #e4e3f4;
 
   --color-tertiary: #1c3352;
+
+  --color-tertiary-2: #7748a2;
 }
 
 * {
@@ -65,7 +67,7 @@ body {
 }
 
 .navbar_title:active {
-  color: #551a8b;
+  color: #7748a2;
 }
 
 .header {
@@ -114,7 +116,6 @@ body {
   width: 80rem;
   height: 100%;
   object-fit: contain;
-  /* border-left: 3px solid #663197; */
 }
 
 .country {
@@ -127,7 +128,7 @@ body {
   align-items: center;
   background-color: #fff;
   position: relative;
-  border-top: 1px solid #551a8b;
+  border-top: 1px solid #7748a2;
 }
 
 .country_items {
@@ -153,7 +154,7 @@ body {
 
 .toPreview:hover,
 .toHeader:hover {
-  background-color: #551a8b;
+  background-color: #7748a2;
   border: 2px solid #fff;
   color: #fff;
 }
@@ -216,7 +217,7 @@ body {
 }
 
 .country_title:hover {
-  background-color: #551a8b;
+  background-color: #7748a2;
   color: #fff;
 }
 
@@ -244,25 +245,9 @@ body {
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: 0.9;
   transform: scale(1.07, 1.05);
-  background-color: #551a8b;
+  background-color: #7748a2;
 }
-
-/* .text-color {
-  color: #551a8b;
-  font-weight: 500;
-} */
-
-/* .list_dot {
-  display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: #551a8b;
-  margin-right: 0.5rem;
-  margin-top: -0.4rem;
-  border-radius: 50%;
-} */
 
 @keyframes loader {
   0% {
@@ -282,5 +267,49 @@ body {
   }
   100% {
     top: 3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 45%;
+  }
+
+  .header_img {
+    width: 50rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .header_img {
+    height: max-content;
+  }
+  .header {
+    flex-direction: column-reverse;
+    justify-content: center;
+    row-gap: 3rem;
+    /* margin-top: 3rem; */
+  }
+  .toPreview,
+  .toHeader {
+    top: 3rem;
+    bottom: unset;
+    right: 1rem;
+    z-index: 100;
+  }
+  .country {
+    flex-direction: column;
+    row-gap: 8rem;
+    padding: 8rem 1rem;
+  }
+
+  .country_info {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header_img {
+    width: 40rem;
   }
 }
